@@ -1,0 +1,41 @@
+﻿<Window x:Class="Banner_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Banner_WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="570" Width="1000" Loaded="Banner">
+    <Grid Margin="0,0,0.333,-4.333" RenderTransformOrigin="0,0" Height="543" VerticalAlignment="Bottom">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0"/>
+        </Grid.ColumnDefinitions>
+
+        <!--Sonics Image settings-->
+        <Image Margin="-2,4,0.333,0" 
+               Source="Seatle_Supersonics.jpg" 
+               Stretch="Fill" 
+               Grid.ColumnSpan="2" 
+               VerticalAlignment="Top" 
+               Height="537"/>
+        <Image x:Name="Image" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Bottom"/>
+
+        <!--Banner Settings-->
+        <Rectangle x:Name="banner" Height="150"
+                   VerticalAlignment="Top"
+                   UseLayoutRounding="False" 
+                   Margin="-0.333,4,0,0" 
+                   RadiusX="150" 
+                   SnapsToDevicePixels="True" 
+                   RadiusY="150" 
+                   RenderTransformOrigin="0.488,0.515" 
+                   TextBlock.FontStretch="Expanded" Grid.ColumnSpan="2" HorizontalAlignment="Left" Width="212" >
+            <Rectangle.Fill>
+                <SolidColorBrush Color="YellowGreen"/>
+            </Rectangle.Fill>
+        </Rectangle>
+
+    </Grid>
+</Window>
