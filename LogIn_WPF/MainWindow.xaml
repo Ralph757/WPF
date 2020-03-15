@@ -1,0 +1,30 @@
+﻿<Window x:Class="LogIn_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LogIn_WPF"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="150" Width="300" BorderThickness="3" Foreground="#FF1B1A1A" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" BorderBrush="#FFDADCEF">
+    <Grid HorizontalAlignment="Left" VerticalAlignment="Top">
+        <StackPanel>
+            
+            <!--Initiating Password stack-->
+            <TextBlock Text="Password" VerticalAlignment="Top" HorizontalAlignment="Center" FontWeight="Bold" Foreground="#FF040F1A">
+            </TextBlock>
+            
+            <!--Initiating Password Box-->
+            <TextBlock>
+                <PasswordBox x:Name="psWord" Height="20" Margin="62,0,49,0" HorizontalAlignment="Center" Width="177" Foreground="#FF232121" VerticalAlignment="Center"/>
+            </TextBlock>
+            
+            <!--Initiating OK stack-->            
+            <TextBlock Margin="136,0,-4,-0.333"> 
+                <Button Command="{Binding PswCmd}" CommandParameter="{Binding ElementName=psWord}" Content="OK" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0"/>
+            </TextBlock>           
+
+
+        </StackPanel>
+
+    </Grid>
+</Window>
